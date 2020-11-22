@@ -1,0 +1,12 @@
+h2{
+  position: fixed;
+
+}
+nav{
+  background-color: lightseagreen;
+}
+.nav-link{
+  color: rgb(250, 28, 62);
+  font-weight: bold;
+}
+

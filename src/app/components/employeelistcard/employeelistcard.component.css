@@ -1,0 +1,18 @@
+.imageClass{
+  width:100px;
+  height:100px;
+}
+.vertical-align{
+  display: flex;
+  align-items: center;
+}
+.col-xs-8{
+  margin: auto;
+}
+.col-xs-6{
+  margin: auto;
+}
+.card{
+  padding: 10px;
+  margin: 10px;
+}

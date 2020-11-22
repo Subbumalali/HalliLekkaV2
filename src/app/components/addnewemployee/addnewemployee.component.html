@@ -1,0 +1,81 @@
+<div class='container'>
+  <div class="container ">
+  <h1 class="text-primary text-center font-weight-bold ">Add New Employee</h1>
+</div>
+<div class='container'>
+  <div class="jumbotron">
+<!--<div id="theForm">
+  <h2>The form</h2>
+  <form #newEmployee="ngForm" name="theForm" (submit)="AddNewEmployee(newEmployee)">
+    <div class="form-group">
+      <label>Employee Name</label>
+      <input type="text"
+            class="form-control"
+            name="ename"
+            [(ngModel)]="Employee.emp_name"
+            #carModel="ngModel"
+            required
+            pattern="^[a-zA-Z]+$">
+      <span class="help-block danger" *ngIf="carModel.errors?.required && carModel.touched">
+        The model name is required
+      </span>
+      <span class="help-block danger" *ngIf="carModel.errors?.pattern && carModel.touched">
+        The model name can only contain the letters a-z or A-Z
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label>Price</label>
+      <input type="number"
+            class="form-control"
+            name="price"
+            required
+            [(ngModel)]="car.price"
+            #carPrice="ngModel">
+      <span class="help-block danger" *ngIf="carPrice.errors?.required && carPrice.touched">
+        The price is required
+      </span>
+    </div>
+
+    <button
+        class="btn btn-primary btn-sm"
+        [disabled]="f.invalid">Add</button>
+  </form>
+</div>-->
+
+<div class="example-container">
+
+  <form #EmployeeForm="ngForm"  [style.fontSize.px]=20 (ngSubmit)="AddNewEmployee(Employee,EmployeeForm)" novalidate>
+    <mat-form-field appearance="fill">
+      <mat-label>Employee Name <span class="material-icons">
+        portrait
+        </span></mat-label>
+      <input matInput required name="employeeName" [(ngModel)]="Employee.emp_name">
+    </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Contact number <span class="material-icons">
+      phone
+      </span></mat-label>
+    <input matInput required name='contactNumber' value="91" pattern="^([9][1])?([0-9]){10,10}$" [(ngModel)]="Employee.contact_number">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label> Total Salary (as of today) </mat-label>
+    <input matInput required value=0 name="totalSalary" pattern="^[0-9]*$" [(ngModel)]="Employee.total_salary">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Amount Due (as of today) </mat-label>
+    <input required matInput value=0 name="amountDue" pattern="^[0-9]*$" [(ngModel)]="Employee.amount_due">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" [disabled]="EmployeeForm.form.invalid" type="submit">Add</button>
+  <button mat-raised-button color="warn"  type="button" (click)="resetForm(EmployeeForm)">Reset</button>
+
+</form>
+
+</div>
+
+  </div>
+  </div>

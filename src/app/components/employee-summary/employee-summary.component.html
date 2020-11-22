@@ -1,0 +1,61 @@
+
+  <div class="container ">
+    <h1 class="text-primary text-center font-weight-bold ">Employee Summary</h1>
+  </div>
+
+
+<!-- <table class="table table-bordered">
+<thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Contact</th>
+    <th scope="col">totalSalary</th>
+    <th scope="col">Amount Due</th>
+    <th scope="col">Date of Join</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let edata of EmployeeData">
+    <td>{{edata.emp_id}}</td>
+    <td>{{edata.emp_name}}</td>
+    <td>{{edata.contact_number}}</td>
+    <td>{{edata.total_salary}}</td>
+    <td>{{edata.amount_due}}</td>
+    <td>{{edata.date_of_join}}</td>
+  </tr>
+</tbody>
+</table> -->
+
+<div class="container-fluid sm">
+
+<div class="table-responsive-sm">
+<table class="table table-hover table-dark ">
+  <caption>List of your Employees</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Total Salary</th>
+      <th scope="col">Amount Due</th>
+      <th scope="col">DOJ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let edata of EmployeeData ;let i =index">
+      <td scope="row">{{i+1}}</td>
+      <td>{{edata.emp_name}}</td>
+      <td>{{edata.contact_number}}</td>
+      <td>{{edata.total_salary}}</td>
+      <td>{{edata.amount_due}}</td>
+      <td>{{edata.date_of_join|date}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+
+
+
+

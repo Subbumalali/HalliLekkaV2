@@ -1,0 +1,66 @@
+<div class="container">
+<div class="card" *ngFor="let employee of EmployeeData">
+  <div class="card-heading">
+    <h3 class="card-title">{{employee.emp_name}}</h3>
+  </div>
+  <div class="card-body">
+
+    <div class="col-xs-10">
+
+      <div class="row vertical-align">
+
+        <div class="col-xs-4">
+          <img class="imageClass" [src]="photopath" />
+        </div>
+        <div class="col-xs-8">
+
+          <div class="row">
+            <div class="col-xs-6">
+              Employee ID
+            </div>
+            <div class="col-xs-6">
+              : {{employee.emp_id}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Contact Number
+            </div>
+            <div class="col-xs-6">
+              : {{employee.contact_number}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Total Salary Earned
+            </div>
+            <div class="col-xs-6">
+              : {{employee.total_salary}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Total Amount Due
+            </div>
+            <div class="col-xs-6">
+              : {{employee.amount_due}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Date of Join
+            </div>
+            <div class="col-xs-6">
+              : {{employee.date_of_join |date}}
+            </div>
+          </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
